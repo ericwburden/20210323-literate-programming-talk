@@ -25,4 +25,4 @@ R Markdown is essentially a literate programming tool with primary support for t
 
 Here's what an R Markdown file looks like:
 
-<embed src="rsc/sample.txt" width="100%" height="550px">
+<embed src="src/rsc/sample.txt" width="100%" height="550px">

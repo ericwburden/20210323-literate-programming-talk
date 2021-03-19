@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Literate Programming | _main.utf8</title>
+  <title>4 Output Formats | _main.utf8</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Literate Programming | _main.utf8" />
+  <meta property="og:title" content="4 Output Formats | _main.utf8" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Literate Programming | _main.utf8" />
+  <meta name="twitter:title" content="4 Output Formats | _main.utf8" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="r-and-r-markdown.html"/>
+<link rel="prev" href="r-markdown-in-action.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -116,7 +116,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style/caption.css" type="text/css" />
+<link rel="stylesheet" href="src/style/caption.css" type="text/css" />
 </head>
 
 <body>
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presenting…</a></li>
+<li class="chapter" data-level="" data-path="presenting.html"><a href="presenting.html"><i class="fa fa-check"></i>Presenting…</a></li>
 <li class="chapter" data-level="1" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1</b> Literate Programming</a></li>
 <li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#the-r-language"><i class="fa fa-check"></i><b>2.1</b> The R Language</a></li>
@@ -154,22 +154,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literate-programming" class="section level1">
-<h1><span class="header-section-number">1</span> Literate Programming</h1>
-<p>From Wikipedia:</p>
-<blockquote>
-<p>Literate programming is a programming paradigm introduced by Donald Knuth in which a computer program is given an explanation of its logic in a natural language, such as English, interspersed with snippets of <strong>macros</strong> and traditional source code, from which compilable source code can be generated.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
-</blockquote>
-<p>From Eric:</p>
-<blockquote>
-<p>It’s basically writing and explaining your code all in one file, like comments on steroids.</p>
-</blockquote>
+<div id="output-formats" class="section level1">
+<h1><span class="header-section-number">4</span> Output Formats</h1>
+<p>The following output formats are available to use with R Markdown Documents<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<ul>
+<li><strong>Documents</strong>
+<ul>
+<li><a href="https://bookdown.org/yihui/rmarkdown/notebook.html">html_notebook</a> - Interactive R Notebooks</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/html-document.html">html_document</a> - HTML document w/ Bootstrap CSS</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/pdf-document.html">pdf_document</a> - PDF document (via LaTeX template)</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/word-document.html">word_document</a> - Microsoft Word document (docx)</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/opendocument-text-document.html">odt_document</a> - OpenDocument Text document</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/rich-text-format-document.html">rtf_document</a> - Rich Text Format document</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/markdown-document.html">md_document</a> - Markdown document (various flavors)</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/tufte-handouts.html">tufte::tufte_handout</a> - PDF handouts in the style of Edward Tufte</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/tufte-handouts.html">tufte::tufte_html</a> - HTML handouts in the style of Edward Tufte</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/tufte-handouts.html">tufte::tufte_book</a> - PDF books in the style of Edward Tufte</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/r-package-vignette.html">html_vignette</a> - R package vignette (HTML)</li>
+<li><a href="https://rmarkdown.rstudio.com/github_document_format.html">github_document</a> - GitHub Flavored Markdown document</li>
+</ul></li>
+<li><strong>Presentations (slides)</strong>
+<ul>
+<li><a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">ioslides_presentation</a> - HTML presentation with ioslides</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/revealjs.html">revealjs::revealjs_presentation</a> - HTML presentation with reveal.js</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/slidy-presentation.html">slidy_presentation</a> - HTML presentation with W3C Slidy</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html">beamer_presentation</a> - PDF presentation with LaTeX Beamer</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html">powerpoint_presentation</a> - PowerPoint presentation</li>
+</ul></li>
+<li><strong>More</strong>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard::flex_dashboard</a> - Interactive dashboards</li>
+<li><a href="https://bookdown.org/yihui/bookdown/">bookdown::bookdown_site</a> - E-Books in a variety of formats</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">rmarkdown_site</a> - Simple websites</li>
+<li><a href="https://bookdown.org/yihui/blogdown/">blogdown</a> - Full features websites powered by Hugo</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">shiny_documents</a> - Interactive documents powered by the Shiny runtime</li>
+<li><a href="https://rstudio.github.io/learnr/">learnr::tutorial</a> - Web-based classes and learning exercises</li>
+</ul></li>
+</ul>
+<p><br></p>
+<p>In fact, this website/presentation was written entirely in R Markdown (with a smidge of YAML and CSS). YOu can view this presentation anytime online<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> and the source code is publicly available on GitHub.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Sewell, Wayne (1989). “<a href="https://archive.org/details/weavingprogramli0000sewe">Weaving a Program: Literate Programming in WEB</a>”. Van Nostrand Reinhold. ISBN <a href="https://en.wikipedia.org/wiki/Special:BookSources/0-442-31946-0">0-442-31946-0</a><a href="literate-programming.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="7">
+<li id="fn7"><p><a href="https://rmarkdown.rstudio.com/lesson-9.html" class="uri">https://rmarkdown.rstudio.com/lesson-9.html</a><a href="output-formats.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p><a href="https://ericwburden.github.io/20210323-literate-programming-talk" class="uri">https://ericwburden.github.io/20210323-literate-programming-talk</a><a href="output-formats.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p><a href="https://github.com/ericwburden/20210323-literate-programming-talk" class="uri">https://github.com/ericwburden/20210323-literate-programming-talk</a><a href="output-formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -177,8 +222,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-and-r-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-markdown-in-action.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

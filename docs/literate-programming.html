@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 R and R Markdown | _main.utf8</title>
+  <title>1 Literate Programming | _main.utf8</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 R and R Markdown | _main.utf8" />
+  <meta property="og:title" content="1 Literate Programming | _main.utf8" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 R and R Markdown | _main.utf8" />
+  <meta name="twitter:title" content="1 Literate Programming | _main.utf8" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="literate-programming.html"/>
-<link rel="next" href="r-markdown-in-action.html"/>
+<link rel="prev" href="presenting.html"/>
+<link rel="next" href="r-and-r-markdown.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -116,7 +116,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style/caption.css" type="text/css" />
+<link rel="stylesheet" href="src/style/caption.css" type="text/css" />
 </head>
 
 <body>
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presenting…</a></li>
+<li class="chapter" data-level="" data-path="presenting.html"><a href="presenting.html"><i class="fa fa-check"></i>Presenting…</a></li>
 <li class="chapter" data-level="1" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1</b> Literate Programming</a></li>
 <li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#the-r-language"><i class="fa fa-check"></i><b>2.1</b> The R Language</a></li>
@@ -154,43 +154,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-and-r-markdown" class="section level1">
-<h1><span class="header-section-number">2</span> R and R Markdown</h1>
-<div id="the-r-language" class="section level2">
-<h2><span class="header-section-number">2.1</span> The R Language</h2>
-<p>From the CRAN (Comprehensive R Archive Network):</p>
+<div id="literate-programming" class="section level1">
+<h1><span class="header-section-number">1</span> Literate Programming</h1>
+<p>From Wikipedia:</p>
 <blockquote>
-<p>R is a system for statistical computation and graphics. It consists of a language plus a run-time environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Literate programming is a programming paradigm introduced by Donald Knuth in which a computer program is given an explanation of its logic in a natural language, such as English, interspersed with snippets of <strong>macros</strong> and traditional source code, from which compilable source code can be generated.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </blockquote>
-<p><strong>Some Facts:</strong></p>
-<ul>
-<li>R is open source</li>
-<li>R is backed by the R Software Foundation</li>
-<li>R is a descendant of ‘S’, which was released in 1976 by Bell Labs</li>
-<li>R was first introduced to the public in 1993, 2 years after the first version of Python</li>
-<li>The first stable beta was released in 2000</li>
-<li>As of March 2021, R was ranked 12th in the Redmonk rankings<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></li>
-</ul>
-</div>
-<div id="r-markdown" class="section level2">
-<h2><span class="header-section-number">2.2</span> R Markdown</h2>
-<p>From RStudio:</p>
+<p>From Eric:</p>
 <blockquote>
-<p>R Markdown is a file format for making dynamic documents with R. An R Markdown document is written in markdown (an easy-to-write plain text format) and contains chunks of embedded R code…<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>It’s basically writing and explaining your code all in one file, like comments on steroids.</p>
 </blockquote>
-<p>R Markdown is essentially a literate programming tool with primary support for the R language, and secondary support for a number of other programming languages as well.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
-<p>Here’s what an R Markdown file looks like:</p>
-<embed src="rsc/sample.txt" width="100%" height="550px">
 
-</div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p><a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f" class="uri">https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f</a><a href="r-and-r-markdown.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://redmonk.com/sogrady/2021/03/01/language-rankings-1-21/" class="uri">https://redmonk.com/sogrady/2021/03/01/language-rankings-1-21/</a><a href="r-and-r-markdown.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p><a href="https://rmarkdown.rstudio.com/articles_intro.html" class="uri">https://rmarkdown.rstudio.com/articles_intro.html</a><a href="r-and-r-markdown.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Literate_programming#Literate_programming_practices" class="uri">https://en.wikipedia.org/wiki/Literate_programming#Literate_programming_practices</a><a href="r-and-r-markdown.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<ol start="1">
+<li id="fn1"><p>Sewell, Wayne (1989). “<a href="https://archive.org/details/weavingprogramli0000sewe">Weaving a Program: Literate Programming in WEB</a>”. Van Nostrand Reinhold. ISBN <a href="https://en.wikipedia.org/wiki/Special:BookSources/0-442-31946-0">0-442-31946-0</a><a href="literate-programming.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -198,8 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="literate-programming.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-markdown-in-action.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="presenting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-and-r-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

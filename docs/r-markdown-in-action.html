@@ -116,7 +116,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style/caption.css" type="text/css" />
+<link rel="stylesheet" href="src/style/caption.css" type="text/css" />
 </head>
 
 <body>
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presenting…</a></li>
+<li class="chapter" data-level="" data-path="presenting.html"><a href="presenting.html"><i class="fa fa-check"></i>Presenting…</a></li>
 <li class="chapter" data-level="1" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1</b> Literate Programming</a></li>
 <li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#the-r-language"><i class="fa fa-check"></i><b>2.1</b> The R Language</a></li>
@@ -162,13 +162,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div style="display: flex; flex-direction: column; flex-basis: 100%; flex: 2;">
 <div class="figure">
-<img src="img/martin_sheen.jpg" alt="" />
+<img src="src/img/martin_sheen.jpg" alt="" />
 <p class="caption">This is Martin Sheen, potentially best known as the father of Charlie Sheen, also a famous actor.</p>
 </div>
 </div>
 </div>
 <p>First, we need to make a connection to the database:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-markdown-in-action.html#cb1-1"></a>db_file &lt;-<span class="st"> &quot;data/movies.db&quot;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-markdown-in-action.html#cb1-1"></a>db_file &lt;-<span class="st"> &quot;src/data/movies.db&quot;</span></span>
 <span id="cb1-2"><a href="r-markdown-in-action.html#cb1-2"></a>con &lt;-<span class="st"> </span>DBI<span class="op">::</span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(), db_file)</span></code></pre></div>
 <p><br></p>
 <p>Let’s start by extracting the data from the database file we need to conduct this analysis into the <code>movie_data</code> variable:</p>
@@ -247,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## $n
 ## [1] 4</code></pre>
 <div class="figure">
-<img src="https://lh3.googleusercontent.com/proxy/QajsRF7RUhLugGtW7rAyES0_tR76khoC4VCkh3zvPg5sLpqNeSk1zRBGdP9g6BEFUAvZBoisUgPcU-w6fyrNT2p-hE5rRWZn1I0sD4PAvo2dpn4__qM" alt="" />
+<img src="src/img/phil_cousineau.jpg" alt="" />
 <p class="caption">It’s this fellow here.</p>
 </div>
 <p><br></p>

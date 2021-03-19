@@ -1,5 +1,5 @@
 ---
-css: "style/caption.css"
+css: "src/style/caption.css"
 ---
 
 # R Markdown in Action
@@ -12,7 +12,7 @@ In this example, we will use SQL to extract data from a database (SQLite file) a
 :::
 
 ::: {style="display: flex; flex-direction: column; flex-basis: 100%; flex: 2;"}
-![This is Martin Sheen, potentially best known as the father of Charlie Sheen, also a famous actor.](img/martin_sheen.jpg)
+![This is Martin Sheen, potentially best known as the father of Charlie Sheen, also a famous actor.](src/img/martin_sheen.jpg)
 :::
 
 ::::
@@ -21,7 +21,7 @@ In this example, we will use SQL to extract data from a database (SQLite file) a
 First, we need to make a connection to the database:
 
 ```{r db_connection, echo=TRUE}
-db_file <- "data/movies.db"
+db_file <- "src/data/movies.db"
 con <- DBI::dbConnect(RSQLite::SQLite(), db_file)
 ```
 
@@ -39,6 +39,11 @@ from movies
 join stars on stars.movie_id = movies.id
 join people on stars.person_id = people.id;
 ```
+
+```{r db_disconnect, include=FALSE}
+DBI::dbDisconnect(con)
+```
+
 
 <br>
 
@@ -105,7 +110,7 @@ most_frequent_costar <- movie_data %>%
 as.list(most_frequent_costar)
 ```
 
-![It's this fellow here.](https://lh3.googleusercontent.com/proxy/QajsRF7RUhLugGtW7rAyES0_tR76khoC4VCkh3zvPg5sLpqNeSk1zRBGdP9g6BEFUAvZBoisUgPcU-w6fyrNT2p-hE5rRWZn1I0sD4PAvo2dpn4__qM)
+![It's this fellow here.](src/img/phil_cousineau.jpg)
 
 <br>
 
