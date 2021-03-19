@@ -1,0 +1,11 @@
+--- 
+title: "Literate Programming in R Markdown"
+author: "Eric Burden"
+date: "`r Sys.Date()`"
+site: "bookdown::bookdown_site"
+cover-image: "img/cover.png"
+output: bookdown::gitbook
+documentclass: book
+link-citations: true
+output_dir: "docs"
+---

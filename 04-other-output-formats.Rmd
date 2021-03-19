@@ -1,0 +1,36 @@
+# Output Formats
+
+The following output formats are available to use with R Markdown Documents^[https://rmarkdown.rstudio.com/lesson-9.html]
+
+- **Documents**
+    - [html_notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) - Interactive R Notebooks
+    - [html_document](https://bookdown.org/yihui/rmarkdown/html-document.html) - HTML document w/ Bootstrap CSS
+    - [pdf_document](https://bookdown.org/yihui/rmarkdown/pdf-document.html) - PDF document (via LaTeX template)
+    - [word_document](https://bookdown.org/yihui/rmarkdown/word-document.html) - Microsoft Word document (docx)
+    - [odt_document](https://bookdown.org/yihui/rmarkdown/opendocument-text-document.html) - OpenDocument Text document
+    - [rtf_document](https://bookdown.org/yihui/rmarkdown/rich-text-format-document.html) - Rich Text Format document
+    - [md_document](https://bookdown.org/yihui/rmarkdown/markdown-document.html) - Markdown document (various flavors)
+    - [tufte::tufte_handout](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - PDF handouts in the style of Edward Tufte
+    - [tufte::tufte_html](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - HTML handouts in the style of Edward Tufte
+    - [tufte::tufte_book](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html) - PDF books in the style of Edward Tufte
+    - [html_vignette](https://bookdown.org/yihui/rmarkdown/r-package-vignette.html) - R package vignette (HTML)
+    - [github_document](https://rmarkdown.rstudio.com/github_document_format.html) - GitHub Flavored Markdown document
+
+- **Presentations (slides)**
+    - [ioslides_presentation](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html) - HTML presentation with ioslides
+    - [revealjs::revealjs_presentation](https://bookdown.org/yihui/rmarkdown/revealjs.html) - HTML presentation with reveal.js
+    - [slidy_presentation](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html) - HTML presentation with W3C Slidy
+    - [beamer_presentation](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) - PDF presentation with LaTeX Beamer
+    - [powerpoint_presentation](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html) -  PowerPoint presentation
+
+- **More**
+    - [flexdashboard::flex_dashboard](https://rmarkdown.rstudio.com/flexdashboard/) - Interactive dashboards
+    - [bookdown::bookdown_site](https://bookdown.org/yihui/bookdown/) - E-Books in a variety of formats
+    - [rmarkdown_site](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html) - Simple websites
+    - [blogdown](https://bookdown.org/yihui/blogdown/) - Full features websites powered by Hugo
+    - [shiny_documents](https://bookdown.org/yihui/rmarkdown/shiny-documents.html) - Interactive documents powered by the Shiny runtime
+    - [learnr::tutorial](https://rstudio.github.io/learnr/) - Web-based classes and learning exercises
+
+<br>
+
+In fact, this website/presentation was written entirely in R Markdown (with a smidge of YAML and CSS). YOu can view this presentation anytime online^[https://ericwburden.github.io/20210323_literate_programming_lightning_talk/src/site/] and the source code is publicly available on GitHub.^[https://github.com/ericwburden/20210323_literate_programming_lightning_talk]
