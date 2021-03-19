@@ -14,5 +14,8 @@ html_files <- list.files("docs", "*.html", full.names = T)
 for (html_file in html_files) {
   file_contents <- readr::read_file(html_file)
   new_contents <- gsub("_main_files", "figures", file_contents)
+  
+  # Also need to replace links/references to "presenting.html" with "index.html"
+  new_contents <- gsub("presenting\\.html", "index\\.html", file_contents)
   readr::write_file(new_contents, html_file)
 }
