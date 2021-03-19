@@ -1,0 +1,28 @@
+# R and R Markdown
+
+## The R Language
+
+From the CRAN (Comprehensive R Archive Network):
+
+> R is a system for statistical computation and graphics. It consists of a language plus a run-time environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files.^[https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f]
+
+**Some Facts:**
+
+- R is open source
+- R is backed by the R Software Foundation
+- R is a descendant of 'S', which was released in 1976 by Bell Labs
+- R was first introduced to the public in 1993, 2 years after the first version of Python
+- The first stable beta was released in 2000
+- As of March 2021, R was ranked 12th in the Redmonk rankings^[https://redmonk.com/sogrady/2021/03/01/language-rankings-1-21/]
+
+## R Markdown
+
+From RStudio: 
+
+> R Markdown is a file format for making dynamic documents with R. An R Markdown document is written in markdown (an easy-to-write plain text format) and contains chunks of embedded R code...^[https://rmarkdown.rstudio.com/articles_intro.html]
+
+R Markdown is essentially a literate programming tool with primary support for the R language, and secondary support for a number of other programming languages as well.^[https://en.wikipedia.org/wiki/Literate_programming#Literate_programming_practices]
+
+Here's what an R Markdown file looks like:
+
+<embed src="rsc/sample.txt" width="100%" height="550px">

@@ -1,6 +1,0 @@
-literate-programming
-r-and-r-markdown
-the-r-language
-r-markdown
-r-markdown-in-action
-output-formats

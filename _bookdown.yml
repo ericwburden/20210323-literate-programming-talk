@@ -8,4 +8,11 @@ output: bookdown::gitbook
 documentclass: book
 link-citations: true
 output_dir: "docs"
+rmd_files: [
+  "src/index.Rmd", 
+  "src/01-literate-programming.Rmd", 
+  "src/02-r-and-rmarkdown.Rmd", 
+  "src/03-rmarkdown-example.Rmd", 
+  "src/04-other-output-formats.Rmd"
+]
 ---
