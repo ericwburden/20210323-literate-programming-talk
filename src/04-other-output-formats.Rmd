@@ -1,5 +1,7 @@
 # Output Formats
 
+## Additional Resources
+
 The following output formats are available to use with R Markdown Documents^[https://rmarkdown.rstudio.com/lesson-9.html]
 
 - **Documents**
@@ -34,3 +36,13 @@ The following output formats are available to use with R Markdown Documents^[htt
 <br>
 
 In fact, this website/presentation was written entirely in R Markdown (with a smidge of YAML and CSS). YOu can view this presentation anytime online^[https://ericwburden.github.io/20210323-literate-programming-talk] and the source code is publicly available on GitHub.^[https://github.com/ericwburden/20210323-literate-programming-talk]
+
+## Some Better Talks
+
+As difficult as it is to imagine, there are better talks on R Markdown out there. Here are a few of my favorites:
+
+<iframe width="1908" height="781" src="https://www.youtube.com/embed/qLEkUjxk7e8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="1908" height="781" src="https://www.youtube.com/embed/_D-ux3MqGug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="1908" height="781" src="https://www.youtube.com/embed/QcE4RBH2auQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

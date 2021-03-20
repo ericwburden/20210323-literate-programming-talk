@@ -1,3 +1,4 @@
+# Renders the book to HTML
 bookdown::render_book("_bookdown.yml", "bookdown::gitbook", output_dir = "docs")
 
 # Post-Build Steps -------------------------------------------------------------

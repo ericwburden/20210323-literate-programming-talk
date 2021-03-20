@@ -4,3 +4,5 @@ the-r-language
 r-markdown
 r-markdown-in-action
 output-formats
+additional-resources
+some-better-talks
