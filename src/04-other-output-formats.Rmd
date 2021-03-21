@@ -1,7 +1,3 @@
----
-css: "src/style/video-container.css"
----
-
 # Output Formats
 
 ## Additional Resources

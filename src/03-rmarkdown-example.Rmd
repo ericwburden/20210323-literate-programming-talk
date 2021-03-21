@@ -1,7 +1,3 @@
----
-css: "src/style/caption.css"
----
-
 # R Markdown in Action
 
 :::: {style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;"}
