@@ -53,7 +53,7 @@ head(movie_data)
 
 With the data in an R data frame, we can identify all movies starring Martin Sheen by name and ID by:
 
-- Filtering `movie_data` to only records where `star_name` is 'Martin Sheen' and `star_dob` is 1958.
+- Filtering `movie_data` to only records where `star_name` is 'Martin Sheen' and `star_dob` is 1940.
 - Keeping only the `movie_id` and `movie_title` fields.
 - De-duplicating the results to ensure one record per unique combination of `movie_id`, `movie_title`, and `movie_year`.
 

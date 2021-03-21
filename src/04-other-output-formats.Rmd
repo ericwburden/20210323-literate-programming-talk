@@ -35,7 +35,7 @@ The following output formats are available to use with R Markdown Documents^[htt
 
 <br>
 
-In fact, this website/presentation was written entirely in R Markdown (with a smidge of YAML and CSS). YOu can view this presentation anytime online^[https://literate-programming.ericburden.page] and the source code is publicly available on GitHub.^[https://github.com/ericwburden/20210323-literate-programming-talk]
+In fact, this website/presentation was written entirely in R Markdown (with a smidge of YAML and CSS). You can view this presentation anytime online^[https://literate-programming.ericburden.page] and the source code is publicly available on GitHub.^[https://github.com/ericwburden/20210323-literate-programming-talk]
 
 ## Some Better Talks
 
