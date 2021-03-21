@@ -7,7 +7,7 @@ cover-image: "img/cover.png"
 output: bookdown::gitbook
 documentclass: book
 link-citations: true
-output_dir: "docs"
+output_dir: "site"
 rmd_files: [
   "src/index.Rmd", 
   "src/01-literate-programming.Rmd", 
