@@ -31,6 +31,7 @@
   
 <link rel="prev" href="literate-programming.html"/>
 <link rel="next" href="r-markdown-in-action.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,22 +49,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -83,7 +83,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -116,7 +116,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="src/style/caption.css" type="text/css" />
+<link rel="stylesheet" href="src/style/video-container.css" type="text/css" />
 </head>
 
 <body>
@@ -131,12 +131,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presenting…</a></li>
 <li class="chapter" data-level="1" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1</b> Literate Programming</a></li>
-<li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a><ul>
+<li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#the-r-language"><i class="fa fa-check"></i><b>2.1</b> The R Language</a></li>
 <li class="chapter" data-level="2.2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>2.2</b> R Markdown</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="r-markdown-in-action.html"><a href="r-markdown-in-action.html"><i class="fa fa-check"></i><b>3</b> R Markdown in Action</a></li>
-<li class="chapter" data-level="4" data-path="output-formats.html"><a href="output-formats.html"><i class="fa fa-check"></i><b>4</b> Output Formats</a><ul>
+<li class="chapter" data-level="4" data-path="output-formats.html"><a href="output-formats.html"><i class="fa fa-check"></i><b>4</b> Output Formats</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="output-formats.html"><a href="output-formats.html#additional-resources"><i class="fa fa-check"></i><b>4.1</b> Additional Resources</a></li>
 <li class="chapter" data-level="4.2" data-path="output-formats.html"><a href="output-formats.html#some-better-talks"><i class="fa fa-check"></i><b>4.2</b> Some Better Talks</a></li>
 </ul></li>
@@ -157,9 +159,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-and-r-markdown" class="section level1">
+<div id="r-and-r-markdown" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> R and R Markdown</h1>
-<div id="the-r-language" class="section level2">
+<div id="the-r-language" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> The R Language</h2>
 <p>From the CRAN (Comprehensive R Archive Network):</p>
 <blockquote>
@@ -175,7 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>As of March 2021, R was ranked 12th in the Redmonk rankings<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></li>
 </ul>
 </div>
-<div id="r-markdown" class="section level2">
+<div id="r-markdown" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> R Markdown</h2>
 <p>From RStudio:</p>
 <blockquote>

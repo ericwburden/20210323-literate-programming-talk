@@ -29,7 +29,7 @@ con <- DBI::dbConnect(RSQLite::SQLite(), db_file)
 
 Let's start by extracting the data from the database file we need to conduct this analysis into the `movie_data` variable:
 
-```{sql connection=con, output.var="movie_data"}
+```{sql get-data, connection = "con", output.var="movie_data"}
 select movies.id as movie_id
   ,movies.title as movie_title
   ,movies.year as movie_year
@@ -61,7 +61,7 @@ With the data in an R data frame, we can identify all movies starring Martin She
 - Keeping only the `movie_id` and `movie_title` fields.
 - De-duplicating the results to ensure one record per unique combination of `movie_id`, `movie_title`, and `movie_year`.
 
-```{r martin_sheen_movies}
+```{r martin_sheen_movies, message=FALSE}
 library(dplyr)
 
 martin_sheen_movies <- movie_data %>% 
@@ -70,6 +70,29 @@ martin_sheen_movies <- movie_data %>%
   distinct()
 
 head(martin_sheen_movies)
+```
+
+<br/>
+
+This is how you would do the same thing in Python, for example:
+
+```{r python-setup, include=FALSE}
+library(reticulate)
+# renv::use_python()  # Needed to initialize a python venv for this project
+# virtualenv_install("renv-python-3.8.5", "pandas")  # Install pandas
+use_virtualenv("renv-python-3.8.5")
+```
+
+```{python martin-sheen-py}
+import pandas as pd
+
+movies = r.movie_data
+movies = movies[movies["star_name"] == "Martin Sheen"]
+movies = movies[movies["star_dob"] == 1940]
+movies = movies[["movie_id", "movie_title", "movie_year"]]
+movies = movies.drop_duplicates()
+
+print(movies.head(6))
 ```
 
 <br>

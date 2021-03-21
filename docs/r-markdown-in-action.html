@@ -31,6 +31,7 @@
   
 <link rel="prev" href="r-and-r-markdown.html"/>
 <link rel="next" href="output-formats.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,22 +49,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -83,7 +83,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -116,7 +116,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="src/style/caption.css" type="text/css" />
+<link rel="stylesheet" href="src/style/video-container.css" type="text/css" />
 </head>
 
 <body>
@@ -131,12 +131,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presenting…</a></li>
 <li class="chapter" data-level="1" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1</b> Literate Programming</a></li>
-<li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a><ul>
+<li class="chapter" data-level="2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html"><i class="fa fa-check"></i><b>2</b> R and R Markdown</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#the-r-language"><i class="fa fa-check"></i><b>2.1</b> The R Language</a></li>
 <li class="chapter" data-level="2.2" data-path="r-and-r-markdown.html"><a href="r-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>2.2</b> R Markdown</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="r-markdown-in-action.html"><a href="r-markdown-in-action.html"><i class="fa fa-check"></i><b>3</b> R Markdown in Action</a></li>
-<li class="chapter" data-level="4" data-path="output-formats.html"><a href="output-formats.html"><i class="fa fa-check"></i><b>4</b> Output Formats</a><ul>
+<li class="chapter" data-level="4" data-path="output-formats.html"><a href="output-formats.html"><i class="fa fa-check"></i><b>4</b> Output Formats</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="output-formats.html"><a href="output-formats.html#additional-resources"><i class="fa fa-check"></i><b>4.1</b> Additional Resources</a></li>
 <li class="chapter" data-level="4.2" data-path="output-formats.html"><a href="output-formats.html#some-better-talks"><i class="fa fa-check"></i><b>4.2</b> Some Better Talks</a></li>
 </ul></li>
@@ -157,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-markdown-in-action" class="section level1">
+<div id="r-markdown-in-action" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> R Markdown in Action</h1>
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;">
 <div style="display: flex; flex-direction: column; flex-basis: 100%; flex: 5; padding-right:20px;">
@@ -171,21 +173,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>First, we need to make a connection to the database:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-markdown-in-action.html#cb1-1"></a>db_file &lt;-<span class="st"> &quot;src/data/movies.db&quot;</span></span>
-<span id="cb1-2"><a href="r-markdown-in-action.html#cb1-2"></a>con &lt;-<span class="st"> </span>DBI<span class="op">::</span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(), db_file)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-markdown-in-action.html#cb1-1" aria-hidden="true" tabindex="-1"></a>db_file <span class="ot">&lt;-</span> <span class="st">&quot;src/data/movies.db&quot;</span></span>
+<span id="cb1-2"><a href="r-markdown-in-action.html#cb1-2" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), db_file)</span></code></pre></div>
 <p><br></p>
 <p>Let’s start by extracting the data from the database file we need to conduct this analysis into the <code>movie_data</code> variable:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="r-markdown-in-action.html#cb2-1"></a><span class="kw">select</span> movies.<span class="kw">id</span> <span class="kw">as</span> movie_id</span>
-<span id="cb2-2"><a href="r-markdown-in-action.html#cb2-2"></a>  ,movies.title <span class="kw">as</span> movie_title</span>
-<span id="cb2-3"><a href="r-markdown-in-action.html#cb2-3"></a>  ,movies.<span class="dt">year</span> <span class="kw">as</span> movie_year</span>
-<span id="cb2-4"><a href="r-markdown-in-action.html#cb2-4"></a>  ,people.name <span class="kw">as</span> star_name</span>
-<span id="cb2-5"><a href="r-markdown-in-action.html#cb2-5"></a>  ,people.birth <span class="kw">as</span> star_dob</span>
-<span id="cb2-6"><a href="r-markdown-in-action.html#cb2-6"></a><span class="kw">from</span> movies</span>
-<span id="cb2-7"><a href="r-markdown-in-action.html#cb2-7"></a><span class="kw">join</span> stars <span class="kw">on</span> stars.movie_id <span class="op">=</span> movies.<span class="kw">id</span></span>
-<span id="cb2-8"><a href="r-markdown-in-action.html#cb2-8"></a><span class="kw">join</span> people <span class="kw">on</span> stars.person_id <span class="op">=</span> people.<span class="kw">id</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="r-markdown-in-action.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> movies.<span class="kw">id</span> <span class="kw">as</span> movie_id</span>
+<span id="cb2-2"><a href="r-markdown-in-action.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  ,movies.title <span class="kw">as</span> movie_title</span>
+<span id="cb2-3"><a href="r-markdown-in-action.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  ,movies.<span class="dt">year</span> <span class="kw">as</span> movie_year</span>
+<span id="cb2-4"><a href="r-markdown-in-action.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  ,people.name <span class="kw">as</span> star_name</span>
+<span id="cb2-5"><a href="r-markdown-in-action.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  ,people.birth <span class="kw">as</span> star_dob</span>
+<span id="cb2-6"><a href="r-markdown-in-action.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> movies</span>
+<span id="cb2-7"><a href="r-markdown-in-action.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">join</span> stars <span class="kw">on</span> stars.movie_id <span class="op">=</span> movies.<span class="kw">id</span></span>
+<span id="cb2-8"><a href="r-markdown-in-action.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">join</span> people <span class="kw">on</span> stars.person_id <span class="op">=</span> people.<span class="kw">id</span>;</span></code></pre></div>
 <p><br></p>
 <p>The <code>movie_data</code> data frame contains the following data:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r-markdown-in-action.html#cb3-1"></a><span class="kw">head</span>(movie_data)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r-markdown-in-action.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(movie_data)</span></code></pre></div>
 <pre><code>##   movie_id              movie_title movie_year              star_name star_dob
 ## 1    15724            Dama de noche       1993 Rafael Sánchez Navarro       NA
 ## 2    15724            Dama de noche       1993      Cecilia Toussaint     1958
@@ -200,14 +202,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Keeping only the <code>movie_id</code> and <code>movie_title</code> fields.</li>
 <li>De-duplicating the results to ensure one record per unique combination of <code>movie_id</code>, <code>movie_title</code>, and <code>movie_year</code>.</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-markdown-in-action.html#cb5-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb5-2"><a href="r-markdown-in-action.html#cb5-2"></a></span>
-<span id="cb5-3"><a href="r-markdown-in-action.html#cb5-3"></a>martin_sheen_movies &lt;-<span class="st"> </span>movie_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-4"><a href="r-markdown-in-action.html#cb5-4"></a><span class="st">  </span><span class="kw">filter</span>(star_name <span class="op">==</span><span class="st"> &quot;Martin Sheen&quot;</span>, star_dob <span class="op">==</span><span class="st"> </span><span class="dv">1940</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-5"><a href="r-markdown-in-action.html#cb5-5"></a><span class="st">  </span><span class="kw">select</span>(movie_id, movie_title, movie_year) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-6"><a href="r-markdown-in-action.html#cb5-6"></a><span class="st">  </span><span class="kw">distinct</span>()</span>
-<span id="cb5-7"><a href="r-markdown-in-action.html#cb5-7"></a></span>
-<span id="cb5-8"><a href="r-markdown-in-action.html#cb5-8"></a><span class="kw">head</span>(martin_sheen_movies)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-markdown-in-action.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a href="r-markdown-in-action.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="r-markdown-in-action.html#cb5-3" aria-hidden="true" tabindex="-1"></a>martin_sheen_movies <span class="ot">&lt;-</span> movie_data <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a href="r-markdown-in-action.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(star_name <span class="sc">==</span> <span class="st">&quot;Martin Sheen&quot;</span>, star_dob <span class="sc">==</span> <span class="dv">1940</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="r-markdown-in-action.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(movie_id, movie_title, movie_year) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="r-markdown-in-action.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb5-7"><a href="r-markdown-in-action.html#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="r-markdown-in-action.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(martin_sheen_movies)</span></code></pre></div>
 <pre><code>##   movie_id               movie_title movie_year
 ## 1    67497       No Drums, No Bugles       1972
 ## 2    69084             Pickup on 101       1972
@@ -215,35 +217,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4    69762                  Badlands       1973
 ## 5    71745 The Legend of Earl Durand       1974
 ## 6    74292    The Cassandra Crossing       1976</code></pre>
+<p><br/></p>
+<p>This is how you would do the same thing in Python, for example:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="r-markdown-in-action.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="r-markdown-in-action.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="r-markdown-in-action.html#cb7-3" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> r.movie_data</span>
+<span id="cb7-4"><a href="r-markdown-in-action.html#cb7-4" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> movies[movies[<span class="st">&quot;star_name&quot;</span>] <span class="op">==</span> <span class="st">&quot;Martin Sheen&quot;</span>]</span>
+<span id="cb7-5"><a href="r-markdown-in-action.html#cb7-5" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> movies[movies[<span class="st">&quot;star_dob&quot;</span>] <span class="op">==</span> <span class="dv">1940</span>]</span>
+<span id="cb7-6"><a href="r-markdown-in-action.html#cb7-6" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> movies[[<span class="st">&quot;movie_id&quot;</span>, <span class="st">&quot;movie_title&quot;</span>, <span class="st">&quot;movie_year&quot;</span>]]</span>
+<span id="cb7-7"><a href="r-markdown-in-action.html#cb7-7" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> movies.drop_duplicates()</span>
+<span id="cb7-8"><a href="r-markdown-in-action.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="r-markdown-in-action.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(movies.head(<span class="dv">6</span>))</span></code></pre></div>
+<pre><code>##        movie_id                movie_title  movie_year
+## 7089      67497        No Drums, No Bugles        1972
+## 11651     69084              Pickup on 101        1972
+## 11869     69158                       Rage        1972
+## 13400     69762                   Badlands        1973
+## 19038     71745  The Legend of Earl Durand        1974
+## 25605     74292     The Cassandra Crossing        1976</code></pre>
 <p><br></p>
 <p>The script below counts the number of Martin Sheen movies released, by decade, and plots the result.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-markdown-in-action.html#cb7-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="r-markdown-in-action.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="r-markdown-in-action.html#cb7-3"></a>movies_by_decade &lt;-<span class="st"> </span>martin_sheen_movies <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-4"><a href="r-markdown-in-action.html#cb7-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">decade =</span> (movie_year <span class="op">%/%</span><span class="st"> </span><span class="dv">10</span>) <span class="op">*</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-5"><a href="r-markdown-in-action.html#cb7-5"></a><span class="st">  </span><span class="kw">group_by</span>(decade) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-6"><a href="r-markdown-in-action.html#cb7-6"></a><span class="st">  </span><span class="kw">tally</span>()</span>
-<span id="cb7-7"><a href="r-markdown-in-action.html#cb7-7"></a></span>
-<span id="cb7-8"><a href="r-markdown-in-action.html#cb7-8"></a><span class="kw">ggplot</span>(movies_by_decade, <span class="kw">aes</span>(decade, n)) <span class="op">+</span></span>
-<span id="cb7-9"><a href="r-markdown-in-action.html#cb7-9"></a><span class="st">  </span><span class="kw">geom_col</span>() <span class="op">+</span></span>
-<span id="cb7-10"><a href="r-markdown-in-action.html#cb7-10"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> n), <span class="dt">vjust =</span> <span class="fl">1.2</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span></span>
-<span id="cb7-11"><a href="r-markdown-in-action.html#cb7-11"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></span>
-<span id="cb7-12"><a href="r-markdown-in-action.html#cb7-12"></a><span class="st">  </span><span class="kw">labs</span>(</span>
-<span id="cb7-13"><a href="r-markdown-in-action.html#cb7-13"></a>    <span class="dt">x =</span> <span class="st">&quot;Decade&quot;</span>,</span>
-<span id="cb7-14"><a href="r-markdown-in-action.html#cb7-14"></a>    <span class="dt">y =</span> <span class="st">&quot;# of Movies Released&quot;</span>,</span>
-<span id="cb7-15"><a href="r-markdown-in-action.html#cb7-15"></a>    <span class="dt">title =</span> <span class="st">&quot;Count of Movies Starring Martin Sheen, by Decade&quot;</span></span>
-<span id="cb7-16"><a href="r-markdown-in-action.html#cb7-16"></a>  )</span></code></pre></div>
-<p><img src="_main_files/figure-html/movies_by_decade-1.png" width="672" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="r-markdown-in-action.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="r-markdown-in-action.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="r-markdown-in-action.html#cb9-3" aria-hidden="true" tabindex="-1"></a>movies_by_decade <span class="ot">&lt;-</span> martin_sheen_movies <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="r-markdown-in-action.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">decade =</span> (movie_year <span class="sc">%/%</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-5"><a href="r-markdown-in-action.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(decade) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-6"><a href="r-markdown-in-action.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>()</span>
+<span id="cb9-7"><a href="r-markdown-in-action.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="r-markdown-in-action.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies_by_decade, <span class="fu">aes</span>(decade, n)) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="r-markdown-in-action.html#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb9-10"><a href="r-markdown-in-action.html#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="r-markdown-in-action.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-12"><a href="r-markdown-in-action.html#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-13"><a href="r-markdown-in-action.html#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Decade&quot;</span>,</span>
+<span id="cb9-14"><a href="r-markdown-in-action.html#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;# of Movies Released&quot;</span>,</span>
+<span id="cb9-15"><a href="r-markdown-in-action.html#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Count of Movies Starring Martin Sheen, by Decade&quot;</span></span>
+<span id="cb9-16"><a href="r-markdown-in-action.html#cb9-16" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="figures/figure-html/movies_by_decade-1.png" width="672" /></p>
 <p><br></p>
 <p>Given that listing of movies, let’s identify which actor or actress <em>other</em> than Martin Sheen appears the most times:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="r-markdown-in-action.html#cb8-1"></a>most_frequent_costar &lt;-<span class="st"> </span>movie_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-2"><a href="r-markdown-in-action.html#cb8-2"></a><span class="st">  </span><span class="kw">inner_join</span>(martin_sheen_movies, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;movie_id&quot;</span>, <span class="st">&quot;movie_title&quot;</span>, <span class="st">&quot;movie_year&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-3"><a href="r-markdown-in-action.html#cb8-3"></a><span class="st">  </span><span class="kw">filter</span>(star_name <span class="op">!=</span><span class="st"> &quot;Martin Sheen&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-4"><a href="r-markdown-in-action.html#cb8-4"></a><span class="st">  </span><span class="kw">group_by</span>(star_name) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-5"><a href="r-markdown-in-action.html#cb8-5"></a><span class="st">  </span><span class="kw">tally</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-6"><a href="r-markdown-in-action.html#cb8-6"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(n))</span>
-<span id="cb8-7"><a href="r-markdown-in-action.html#cb8-7"></a></span>
-<span id="cb8-8"><a href="r-markdown-in-action.html#cb8-8"></a><span class="kw">as.list</span>(most_frequent_costar)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="r-markdown-in-action.html#cb10-1" aria-hidden="true" tabindex="-1"></a>most_frequent_costar <span class="ot">&lt;-</span> movie_data <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="r-markdown-in-action.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(martin_sheen_movies, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;movie_id&quot;</span>, <span class="st">&quot;movie_title&quot;</span>, <span class="st">&quot;movie_year&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="r-markdown-in-action.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(star_name <span class="sc">!=</span> <span class="st">&quot;Martin Sheen&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="r-markdown-in-action.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(star_name) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="r-markdown-in-action.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-6"><a href="r-markdown-in-action.html#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">==</span> <span class="fu">max</span>(n))</span>
+<span id="cb10-7"><a href="r-markdown-in-action.html#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="r-markdown-in-action.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">as.list</span>(most_frequent_costar)</span></code></pre></div>
 <pre><code>## $star_name
 ## [1] &quot;Phil Cousineau&quot;
 ## 
@@ -255,13 +275,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p><br></p>
 <p>To finish, up, let’s identify which four movies Martin Sheen and Phil Cousineau appeared in together:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="r-markdown-in-action.html#cb10-1"></a>which_four_movies &lt;-<span class="st"> </span>movie_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-2"><a href="r-markdown-in-action.html#cb10-2"></a><span class="st">  </span><span class="kw">inner_join</span>(martin_sheen_movies, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;movie_id&quot;</span>, <span class="st">&quot;movie_title&quot;</span>, <span class="st">&quot;movie_year&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-3"><a href="r-markdown-in-action.html#cb10-3"></a><span class="st">  </span><span class="kw">filter</span>(star_name <span class="op">==</span><span class="st"> &quot;Phil Cousineau&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-4"><a href="r-markdown-in-action.html#cb10-4"></a><span class="st">  </span><span class="kw">select</span>(movie_id, movie_title) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-5"><a href="r-markdown-in-action.html#cb10-5"></a><span class="st">  </span><span class="kw">distinct</span>()</span>
-<span id="cb10-6"><a href="r-markdown-in-action.html#cb10-6"></a>  </span>
-<span id="cb10-7"><a href="r-markdown-in-action.html#cb10-7"></a>knitr<span class="op">::</span><span class="kw">kable</span>(which_four_movies)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="r-markdown-in-action.html#cb12-1" aria-hidden="true" tabindex="-1"></a>which_four_movies <span class="ot">&lt;-</span> movie_data <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="r-markdown-in-action.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(martin_sheen_movies, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;movie_id&quot;</span>, <span class="st">&quot;movie_title&quot;</span>, <span class="st">&quot;movie_year&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="r-markdown-in-action.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(star_name <span class="sc">==</span> <span class="st">&quot;Phil Cousineau&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="r-markdown-in-action.html#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(movie_id, movie_title) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-5"><a href="r-markdown-in-action.html#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb12-6"><a href="r-markdown-in-action.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-7"><a href="r-markdown-in-action.html#cb12-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(which_four_movies)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
