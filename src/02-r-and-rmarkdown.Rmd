@@ -2,7 +2,7 @@
 
 ## The R Language
 
-From the CRAN (Comprehensive R Archive Network):
+From CRAN (Comprehensive R Archive Network):
 
 > R is a system for statistical computation and graphics. It consists of a language plus a run-time environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files.^[https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f]
 
